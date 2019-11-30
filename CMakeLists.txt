@@ -1,0 +1,7 @@
+cmake_minimum_required(VERSION 2.8)
+project(hello_world)
+set(CMAKE_CXX_STANDARD 11)
+set(CMAKE_EXPORT_COMPILE_COMMANDS ON)
+find_package(OpenCV REQUIRED)
+add_executable(grayscaleblur main.cpp ImageProcessing.cpp TestTask.cpp)
+target_link_libraries(grayscaleblur ${OpenCV_LIBS})
